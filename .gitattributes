@@ -1,0 +1,22 @@
+# Normalize line endings for this repository.
+# Git always stores LF in the repository; the rules below only affect checkout.
+* text=auto eol=lf
+
+# Windows scripts need CRLF
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+
+# Linux/macOS scripts must stay LF (CRLF makes bash report "bad interpreter")
+*.sh  text eol=lf
+
+# Config and docs: LF
+*.js   text eol=lf
+*.md   text eol=lf
+*.json text eol=lf
+
+# Binary files: leave untouched
+*.png  binary
+*.jpg  binary
+*.ico  binary
+*.zip  binary
